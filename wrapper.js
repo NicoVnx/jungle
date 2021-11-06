@@ -1,5 +1,5 @@
 const btn = document.getElementById("drop");
-const warp = document.querySelector(".warp");
+const warp = document.querySelector(".dropWarp");
 
 
 document.addEventListener('click', function(event) {
@@ -11,6 +11,7 @@ document.addEventListener('click', function(event) {
     warp.classList.add('hide')
   }
 });
+
 
 
 

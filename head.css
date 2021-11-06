@@ -114,6 +114,14 @@ ul li a, i, li a, p, a, select{
 
 }
 
+hr{
+
+    margin: 0;
+    width: 65%;
+    background-color: rgba(0, 0, 0, 0.137);
+
+}
+
 input:focus, select:focus{
 
     outline: 0;
