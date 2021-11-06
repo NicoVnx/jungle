@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="./head.css">
@@ -29,7 +29,7 @@
 
 <body>
     
-    <header class="">
+    <header class="jungle">
        
         <nav class="container header">
 
@@ -37,34 +37,32 @@
 
             
 
-                <a href="./home.html">  Home </a>
+                <a href="./index.html">  Home </a>
                 
                 
                 <button id="btnHamb"><img id="imgHamb" src="img/hamb.png" alt="" ></button>
                   
 
-                <div class="dropWarp hide">
-                    <div class="dropHe">
-                    <button id="drop">Plantas</button>
-                    </div>
                 
-                   <ul>
-                        <li><a href="./planta1.html" > Planta1 </a></li>
-                        <div class="hr"></div>
-                        <li><a href="./planta2.html" > Planta2 </a></li>
-                        <div class="hr"></div>
-                        <li><a href="./planta3.html" > Planta3 </a></li>
-                        <div class="hr"></div>
-                        <li><a href="./planta4.html" > Planta4 </a></li>
-                        <div class="hr"></div>
-                        <li><a href="./planta5.html" > Planta5 </a></li>
-                    </ul>
-                </div>
+                    
+                <a href="./plantas.html">Galeria de Plantas</a>
+                    
+                
                     
             
             <div class="toggle">
             <input id="switch" type="checkbox" name="theme">
-            <label class="sw" for="switch"><img id="imgDark" src="img/sun.png" alt="" title="darkmode"></label>
+            <label id="swDark" class="sw swOn" for="switch">
+                <div class="onOff">
+                    darkmode 
+                    <div class="swsw">
+                        <p class="off">OFF</p>
+                        <p class="on">ON</p>
+                        
+                    </div>
+                </div>
+                
+            </label>
             </div>
 
         </nav>
@@ -79,9 +77,9 @@
     <div class="container home">
 
         <div class="content-home">
-
+            <p class="sub">Welcome to</p>
         <div id="title-home">
-            <h2 class="animate__animated animate__fadeInDown">Bem-Vindo a </h2><h2 class="blue animate__animated animate__fadeInDown">Flyplane</h2> 
+            <h2 class="animate__animated animate__fadeInDown">Jungle</h2> 
         </div>
 
         <p class="sub one">Destinos perfeitos para gostos diferentes</p>
@@ -90,17 +88,17 @@
            
 
             <nav class="carrousel">
-                <p class="sub esp">-- Recomendados --</p>
+                <p class="sub esp">-- Plantas --</p>
 
                 <nav class="nav-cards">
 
-<div class="click sc">
+<div class="click">
 
-    <div class="card end suica" >
+    <div class="card suica" >
                     
                     <div class="cont-card suica hide" >
                         <p>Suiça - Interlaken</p>
-                            <img src="img/5stars.png" alt="">
+                            
                             <p class="desc suica hide">A Suíça é um país montanhoso da Europa Central 
                                 com um grande número de lagos, 
                                 vilas e picos elevados dos Alpes. Suas cidades têm bairros medievais e 
@@ -117,7 +115,7 @@
                      
                     <div class="cont-card hide jp " >
                         <p>Itália - Roma</p>
-                        <img src="img/5stars.png" alt="">
+                        
                             <p class="desc jp hide">Roma, a capital da Itália, é uma cidade cosmopolita, 
                                 enorme, com quase 3.000 anos de arte, arquitetura e cultura influentes no 
                                 mundo todo. Ruínas antigas como o Fórum e o Coliseu evocam o poder 
@@ -128,11 +126,11 @@
 </div>
                 
 <div class="click">
-<div class="card end rj" >
+<div class="card rj" >
                     
                     <div class="cont-card rj hide">
                         <p>Brasil - Copacabana</p>
-                        <img src="img/5stars.png" alt="">
+                        
                             <p class="desc rj hide">Famosa pela praia em forma de meia-lua, Copacabana é um dos bairros mais animados do Rio. 
                                 Atraindo moradores e turistas para atividades nas suas areias e no calçadão desenhado
                     
@@ -143,12 +141,10 @@
 
 
 </div>
-               
+
 
                 </nav>
-
-                <p class="sub footer"><a href="/destinos" class="sub">Veja mais em Destinos &#8618;</a></p>
-
+<p class="sub footer"><a href="./plantas.html" class="sub">Veja mais em Plantas &#8618;</a></p>
             </nav>
 
         </div>
@@ -159,34 +155,53 @@
    
     <img id="imgBust" src="img/bust.png" alt="">
      
-    <div class="viagemHomeTxt"><p>O principal objetivo do nosso site é te mostrar qual é
+    <div class="viagemHomeTxt">
+        <p>O principal objetivo do nosso site é te mostrar qual é
         o seu destino ideal. Contamos com um sistema inteligente que de acordo com suas respostas
         monta um perfil para você e o encaixa no local mais recomendado para sua viajem!
     </p>
-        <a href="/viagem">Decubra já qual o seu!</a>
+       
     </div>
 
 </div>
 
-<div class="hr"></div>
-
-        <div class="sobreHome">
-            <div class="sobreHomeTxt"><p>Somos especializados em turismo!
-                Trazemos a você a melhor experiência em viagens, e abrimos as portas do
-                descobrimento e da cultura para os nossos clientes. Novas experiencias, novos
-                ares e novos gostos, aqui você pode!
-            </p>
-                <a href="/sobre" class="sub">Veja mais em Sobre &#8618;</a></div>
-            <img id="imgCrist" src="img/crist.png" alt="" >
-
-        </div>
-
-
-
     </div>
     
     </div>
-    <script src="./wrapper.js"></script>
-    <script src="./btnHamb.js"></script>
+    
+    <script src="./card.js"></script>
+    <script src="./darkMode.js"></script>
+
+    <footer class="footer">
+
+        <div class="content-footer">
+    
+            <div class="navCont"> 
+            <div class="sociais">
+                <a href="https://www.instagram.com" target="_blank"><img id="imgIg" src="img/instaw.png" alt="Intagram"></a>
+                <a href="https://www.github.com" target="_blank"><img id="imgGit" src="img/gitw.png" alt="Github"></a>
+                <a  href="https://www.facebook.com" target="_blank"><img id="imgFb" src="img/fbw.png" alt="Facebook"></a>
+            </div>
+    
+            <nav id="navFooter">
+                <ul>
+                    <li><a href="/contato">Viagem</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/suporte">Suporte</a></li>
+                    <li><a href="/destinos">Destinos</a></li>
+                </ul>
+            </nav>
+    
+            <div class="thx">
+                <p>Obrigado por visitar nosso site!</p>
+            </div>
+    </div>
+            <div class="company"><p>Flyplane © 2021</p></div>
+    
+        </div>
+    
+        <script src="script/darkMode.js"></script>
+    
+    </footer>
 </body>
 </html>
