@@ -1,0 +1,560 @@
+<%- include('parts/page-head', { title : 'Viagem', linkCSS : 'css/viagem.css'}) %>
+
+<body>
+    
+    <%- include('parts/page-header', { }) %>
+
+<div class="container viagemDiv">
+
+    <div class="content-viagem">
+
+  
+
+    <% if(valida == undefined || valida == 0){ %>    
+
+    <form action="/viagemEmail" method="post">
+
+    <div class="cont email">
+    <h3 class="titleViagem emailViagem">Para continuar digite aqui o seu email </h3>
+
+    
+
+<div class="partEmail">
+    <label for="email">Email:</label>
+    <div class="partInput">
+    <input type="text" id="email" name="email">
+
+    <% if(erroV == true){%>
+    <p class="erro"><%= erro %> </p>
+    <%}%>
+</div>
+    <button id="test" type="submit" class="submit">Confirmar</button>
+    </div>
+    </div>
+    
+    <%}%>
+
+    </form>
+
+
+    <% if(valida == 1){ %>
+    <form action="/viagemQuest" method="post" id="formOneQuest">
+
+<div class="titleViagem questViagem">Preencha o questionário</div>
+<%if(erroV == true){%><p class="erro"><%= erroPerfil %> </p><%}%>
+    <div class="cont quest">
+
+    
+    <p class="titleQuest">1.Qual sua prioridade na hora de montar um roteiro de viagem?</p>
+
+    <div class="questsOne">
+    <input type="radio" name="one" value="praia" id="oneQone"><label for="oneQone"> Apreciar alegrias simples da vida</label>
+    <input type="radio" name="one" value="hist" id="oneQtwo"> <label for="oneQtwo">Ter uma variedade de programas culturais</label> 
+    <input type="radio" name="one" value="mont" id="oneQthree"> <label for="oneQthree">Recarregar as energias</label> 
+    <input type="radio" name="one" value="desc" id="oneQfour"> <label for="oneQfour"> Sair dos padrões turísticos</label>
+    </div>
+
+    <div class="hr"></div>
+
+    <p class="titleQuest">2.Você se considera uma pessoa relativamente...</p>
+
+    <div class="questsOne">
+    <input type="radio" name="two"value="mont" id="twoQone"><label for="twoQone">Reservada e sossegada</label> 
+    <input type="radio" name="two" value="praia" id="twoQtwo"><label for="twoQtwo">Descontraída e despreocupada</label>
+    <input type="radio" name="two"value="desc" id="twoQthree"><label for="twoQthree">Aventureira e corajosa</label>
+    <input type="radio" name="two" value="hist" id="twoQfour"><label for="twoQfour">Curiosa e Crítica</label>
+    </div>
+    
+    <div class="hr"></div>
+
+    <p class="titleQuest">3.Qual estação do ano você prefere mais?</p>
+
+    <div class="questsOne">
+    <input type="radio" name="three" value="hist" id="threeQone"><label for="threeQone">Inverno</label>
+    <input type="radio" name="three"value="desc" id="threeQtwo"><label for="threeQtwo">Primavera </label>
+    <input type="radio" name="three" value="praia" id="threeQthree"><label for="threeQthree">Verão </label>
+    <input type="radio" name="three" value="mont" id="threeQfour"><label for="threeQfour">Outono</label>
+    </div>
+
+    <div class="hr"></div>
+
+    <p class="titleQuest">4.Qual dessas opções culinárias você preferia comer?</p>
+
+    <div class="questsOne">
+    <input type="radio" name="four"value="desc" id="fourQone"><label for="fourQone">Comidas Exóticas</label>
+    <input type="radio" name="four" value="hist" id="fourQtwo"><label for="fourQtwo">Massas e comidas típicas da região</label>
+    <input type="radio" name="four" value="praia" id="fourQthree"><label for="fourQthree">Frutos do mar e Peixes</label>
+    <input type="radio" name="four" value="mont" id="fourQfour"><label for="fourQfour">Comidas quentes e queijos</label>
+    </div>
+    
+    <div class="hr"></div>
+
+    <p class="titleQuest">5.Imagine essa situação: Se você tivesse que passar um tempo em uma ilha deserta, o que você levaria?</p>
+
+    <div class="questsOne">
+    <input type="radio" name="five"value="desc" id="fiveQone"><label for="fiveQone">Levaria um kit de sobrevivência, um mapa e uma série 
+    de utensílios como facas, garrafas ,cordas e curativos</label>
+    <input type="radio" name="five" value="hist" id="fiveQtwo"><label for="fiveQtwo">Levaria livros, papel, canetas e uma camera fotográfica</label>
+    <input type="radio" name="five" value="praia" id="fiveQthree"><label for="fiveQthree">Meus amigos para aproveitar comigo, um cooler, caixinha de som e protetor solar</label>
+    <input type="radio" name="five" value="mont" id="fiveQfour"><label for="fiveQfour">Muitos lencinhos para chorar pois seria péssima essa situação</label>
+    </div>
+
+    </div>
+
+    </form>
+<div class="buttonsNav">
+        <form action="/viagemBack" method="post"><button type="submit" class="back">Mudar Email</button></form>
+    <button type="submit" class="submit" form="formOneQuest">Avançar</button>
+    
+    </div>
+    
+
+
+    <%} else if(valida == 2) {%>
+<% if(perfil == 'praia'){%>
+    <div class="contPerfil">
+        <p class="preTitle">O seu perfil de viagem é:</p>
+        <h3 class="titleViagem questTwoViagem mainPerfil Tpraia">Praia</h3>
+        <div class="contPerfilCont">
+            <img class="imgPerfil" src="img/praia.png" alt="">
+            <p class="contPerfilTxt">
+                Você é alguem sossegado que gosta de curtir a agua do mar,
+                o clima praiano e tropical se encaixam so seu perfil,
+               também gosta da natureza e prefere destinos mais 
+               tranquilos e livre do cotidiano.
+
+            </p>
+        </div>
+    </div>
+
+    <div class="hr hrMain"></div>
+
+    <form action="/viagemQuestFinal" method="post" id="formTwoQuest">
+    <h3 class="titleViagem questViagem questTwoViagem">Preencha o formulário para saber o seu destino!</h3>
+
+    <%if(erroV == true){%><p class="erro"><%= erroPerfil %> </p><%}%>
+<div class="cont quest">
+     
+
+    <p class="titleQuest">1.Qual comida você prefere mais?</p>
+    <input type="radio" name="oneF" value="<%=praia[0]%>" id="oneQqOne"><label for="oneQqOne">Carnes e grãos</label>
+    <input type="radio" name="oneF" value="<%=praia[1]%>" id="oneQqTwo"><label for="oneQqTwo">Sopas e massas</label>
+    <div class="hr"></div>
+
+    <p class="titleQuest">2.Você fala mais de um idioma? </p>
+    <input type="radio" name="twoF" value="<%=praia[1]%>" id="twoQqOne"><label for="twoQqOne"> Sim, eu falo</label>
+    <input type="radio" name="twoF" value="<%=praia[0]%>" id="twoQqTwo"><label for="twoQqTwo"> Não falo</label>
+    <div class="hr"></div>
+
+    <p class="titleQuest">3. Você tem disponibilidade financeira e de horário para tratar questões burocráticas como passaportes e vistos?</p>
+    <input type="radio" name="threeF" value="<%=praia[0]%>" id="threeQqOne"><label for="threeQqOne"> Não possuo disponibilidade</label>
+    <input type="radio" name="threeF" value="<%=praia[1]%>" id="threeQqTwo"><label for="threeQqTwo"> Sim, eu possuo disponibilidade</label>
+
+
+    
+
+
+
+    <%}%>
+
+    <%if( perfil == 'hist'){ %> 
+        <div class="contPerfil">
+            <p class="preTitle">O seu perfil de viagem é:</p>
+            <h3 class="titleViagem questTwoViagem mainPerfil Thist">Cidades Históricas</h3>
+            <div class="contPerfilCont">
+                <img class="imgPerfil" src="img/hist.png" alt="">
+                <p class="contPerfilTxt">
+                    Você é uma pessoa crítica que ama arte e história, aprecia novas experiencias
+                    e tem prazer em conhecer novas culturas e pessoas, ainda sim, ser obervador e 
+                    ter uma opnião aguçada definem uma parte de você.
+                </p>
+            </div>
+        </div>
+    
+        <div class="hr hrMain"></div>
+    
+        <form action="/viagemQuestFinal" method="post" id="formTwoQuest">
+        <h3 class="titleViagem questViagem questTwoViagem">Preencha o formulário para saber o seu destino!</h3>
+    
+        <%if(erroV == true){%><p class="erro"><%= erroPerfil %> </p><%}%>
+    <div class="cont quest">
+
+    <p class="titleQuest">1.Qual comida você prefere mais?</p>
+    <input type="radio" name="oneF" value="<%=hist[0]%>" id="oneQqOne"><label for="oneQqOne">Sopas e tortas</label>
+    <input type="radio" name="oneF" value="<%=hist[1]%>" id="oneQqTwo"><label for="oneQqTwo">Carnes e massas</label>
+    <div class="hr"></div>
+
+    <p class="titleQuest">2.Você fala mais de um idioma?</p>
+    <input type="radio" name="twoF" value="<%=hist[1]%>" id="twoQqOne"><label for="twoQqOne"> Não falo</label>
+    <input type="radio" name="twoF" value="<%=hist[0]%>" id="twoQqTwo"><label for="twoQqTwo"> Sim, eu falo</label>
+    <div class="hr"></div>
+
+    <p class="titleQuest">3. Você tem disponibilidade financeira e de horário para tratar questões burocráticas como passaportes e vistos?</p>
+    <input type="radio" name="threeF" value="<%=hist[1]%>" id="threeQqOne"><label for="threeQqOne"> Não possuo disponibilidade</label>
+    <input type="radio" name="threeF" value="<%=hist[0]%>" id="threeQqTwo"><label for="threeQqTwo"> Sim, eu possuo disponibilidade</label>
+
+
+    
+
+
+    <%}%>
+
+    <%if( perfil == 'desc'){ %> 
+        <div class="contPerfil">
+            <p class="preTitle">O seu perfil de viagem é:</p>
+            <h3 class="titleViagem questTwoViagem mainPerfil Tdesc">Lugares Desconhecidos</h3>
+            <div class="contPerfilCont">
+                <img class="imgPerfil" src="img/desc.png" alt="">
+                <p class="contPerfilTxt">
+                    Você é alguem que gosta de sair dos padrões, gosta de experiencias novas 
+                    e de sair da zona de conforto,
+                    e pra tudo isso sua coragem e espirito de aventureiro o acompanham, 
+                    efrentando e se adimirando por novos custumes
+                    e culturas.
+            </div>
+        </div>
+    
+        <div class="hr hrMain"></div>
+    
+        <form action="/viagemQuestFinal" method="post" id="formTwoQuest">
+        <h3 class="titleViagem questViagem questTwoViagem">Preencha o formulário para saber o seu destino!</h3>
+    
+        <%if(erroV == true){%><p class="erro"><%= erroPerfil %> </p><%}%>
+    <div class="cont quest">
+
+    <p class="titleQuest">1.Qual comida você prefere mais?</p>
+    <input type="radio" name="oneF" value="<%=desc[0]%>"id="oneQqOne"><label for="oneQqOne">Queijos quentes e massas</label>
+    <input type="radio" name="oneF" value="<%=desc[1]%>" id="oneQqTwo"><label for="oneQqTwo">Queijos e grãos</label>
+    <div class="hr"></div>
+
+    <p class="titleQuest">2.Você fala mais de um idioma?</p>
+    <input type="radio" name="twoF" value="<%=desc[1]%>" id="twoQqOne"><label for="twoQqOne">Não falo</label>
+    <input type="radio" name="twoF" value="<%=desc[0]%>" id="twoQqTwo"><label for="twoQqTwo">Sim, eu falo</label>
+    <div class="hr"></div>
+
+    <p class="titleQuest">3. Você tem disponibilidade financeira e de horário para tratar questões burocráticas como passaportes e vistos?</p>
+    <input type="radio" name="threeF" value="<%=desc[1]%>" id="threeQqOne"><label for="threeQqOne"> Não possuo disponibilidade</label>
+    <input type="radio" name="threeF" value="<%=desc[0]%>" id="threeQqTwo"><label for="threeQqTwo"> Sim, eu possuo disponibilidade</label>
+
+
+    
+
+
+    <%}%>
+
+    <%if( perfil == 'mont'){ %>
+        <div class="contPerfil">
+            <p class="preTitle">O seu perfil de viagem é:</p>
+            <h3 class="titleViagem questTwoViagem mainPerfil Tmont">Montanhas</h3>
+            <div class="contPerfilCont">
+                <img class="imgPerfil" src="img/mont.png" alt="">
+                <p class="contPerfilTxt">
+                    Você é uma pessoa calma  e sossegada, gosta de descansar e repor as energias
+                    no destino de viagem, as paisagens lindas e montanhosas te alegram, sem contar 
+                    na sensação de aventura e paz que as montanhas trazem para quem as aprecia.
+                </p>
+            </div>
+        </div>
+    
+        <div class="hr hrMain"></div>
+    
+        <form action="/viagemQuestFinal" method="post" id="formTwoQuest">
+        <h3 class="titleViagem questViagem questTwoViagem">Preencha o formulário para saber o seu destino!</h3>
+    
+        <%if(erroV == true){%><p class="erro"><%= erroPerfil %> </p><%}%>
+    <div class="cont quest">
+
+    <p class="titleQuest">1.Qual comida você prefere mais?</p>
+    <input type="radio" name="oneF" value="<%=mont[0]%>"id="oneQqOne"><label for="oneQqOne">Peixes e sopas</label>
+    <input type="radio" name="oneF" value="<%=mont[1]%>" id="oneQqTwo"><label for="oneQqTwo">Queijos quentes e massas</label>
+    <div class="hr"></div>
+
+    <p class="titleQuest">2.Você fala mais de um idioma?</p>
+    <input type="radio" name="twoF" value="<%=mont[1]%>" id="twoQqOne"><label for="twoQqOne"> Sim, eu falo</label>
+    <input type="radio" name="twoF" value="<%=mont[0]%>" id="twoQqTwo"><label for="twoQqTwo"> Não falo</label>
+    <div class="hr"></div>
+
+    <p class="titleQuest">3. Você tem disponibilidade financeira e de horário para tratar questões burocráticas como passaportes e vistos?</p>
+    <input type="radio" name="threeF" value="<%=mont[1]%>" id="threeQqOne"><label for="threeQqOne"> Sim, eu possuo disponibilidade</label>
+    <input type="radio" name="threeF" value="<%=mont[0]%>" id="threeQqTwo"><label for="threeQqTwo"> Não possuo disponibilidade</label>
+
+
+    
+
+
+    <%}%>
+</div>
+
+    </form>
+
+    <div class="buttonsNav">
+    
+    <form action="/viagemBack" method="post"><button type="submit" class="back">Voltar</button></form>
+    <p><button form="formTwoQuest" type="submit" class="submit">Confirmar</button></p>
+    </div>
+
+    <%} else if(valida == 3){  %>
+       <h3 class="titleViagem questTwoViagem mainFinal">Parabéns! Questionário concluído</h3> 
+      
+       <%if(perfil == 'praia'){%>
+    <div class="contFinal">
+        
+    <%if(destinoFinal == "cancún"){%> 
+        
+            <div class="contDest">
+                <p class="preTitle">O seu destino é:</p>
+                <div class="partDestTitle">
+                <h3 class="titleViagem questTwoViagem mainDest Tcancun">Cancún</h3>
+                <img src="img/mxc.png" alt="México" title="México"></div>
+                <div class="contDestCont">
+                    
+                    <p class="contDestTxt">
+                        Cancún, uma cidade mexicana situada, na costa do Mar do Caribe, 
+                        é conhecida por suas praias, seus vários resorts e sua vida noturna. Ela é composta por duas 
+                        áreas distintas: a área mais tradicional do centro da cidade, El Centro, e a Zona Hotelera, 
+                        uma longa faixa à beira-mar com grandes hotéis, casas noturnas, lojas e restaurantes. 
+                        
+                    </p>
+                </div>
+            </div>
+    <%}else{%>
+        
+        <div class="contDest">
+            <p class="preTitle">O seu destino é:</p>
+            <div class="partDestTitle">
+                
+            <h3 class="titleViagem questTwoViagem mainDest Tcopacabana">Copacabana</h3> 
+            <img src="img/br.png" alt="Brasil" title="Brasil"></div>
+            <div class="contDestCont">
+            
+                <p class="contDestTxt">
+                    Famosa pela praia em forma de meia-lua, Copacabana é um dos bairros mais animados do Rio.
+                    Ela atrai moradores e turistas para atividades ininterruptas nas suas areias e no calçadão desenhado. 
+                    Entre os arranha-céus com vista para a praia, estão o hotel Copacabana Palace e o 
+                    exuberante Forte de Copacabana, que abriga um museu militar. Mais para dentro do bairro, cafés 
+                    descontraídos e bares casuais enchem as ruas sossegadas. 
+                </p>
+            </div>
+        </div>
+        <%}%>       
+    <div class="hr hrMain"></div>
+
+            <div class="contPerfil">
+            <p class="preTitle">O seu perfil de viagem é:</p>
+            <h3 class="titleViagem questTwoViagem mainPerfil Tpraia">Praia</h3>
+            <div class="contPerfilCont">
+                <img class="imgPerfil" src="img/praia.png" alt="">
+                <p class="contPerfilTxt">
+                    Você é alguem sossegado que gosta de curtir a agua do mar,
+                    o clima praiano e tropical se encaixam so seu perfil,
+                também gosta da natureza e prefere destinos mais 
+                tranquilos e livre do cotidiano.
+
+                </p>
+            </div>
+        </div>
+    </div>
+<%}%>
+
+<%if(perfil == 'hist'){%>
+    <div class="contFinal">
+        
+    <%if(destinoFinal == "roma"){%>    
+            <div class="contDest">
+                <p class="preTitle">O seu destino é:</p>
+                <div class="partDestTitle">
+                <h3 class="titleViagem questTwoViagem mainDest Troma">Roma</h3>
+                <img src="img/italia.png" alt="Roma" title="Roma"></div>
+                <div class="contDestCont">
+                    
+                    <p class="contDestTxt">
+                        Roma, a capital da Itália, é uma cidade cosmopolita, enorme, 
+                        com quase 3.000 anos de arte, arquitetura e cultura influentes
+                         no mundo todo. Ruínas antigas como o Fórum e o Coliseu 
+                         evocam o poder do antigo Império Romano. A Cidade do Vaticano, tem a Basílica de São Pedro e os museus do Vaticano,
+                           que abrigam obras-primas como os afrescos da Capela Sistina de Michelângelo.
+                        
+                    </p>
+                </div>
+            </div>
+    <%}else{%>
+        <div class="contDest">
+            <p class="preTitle">O seu destino é:</p>
+            <div class="partDestTitle">
+                
+            <h3 class="titleViagem questTwoViagem mainDest Tcopacabana">Ouro Preto</h3> 
+            <img src="img/br.png" alt="Brasil" title="Brasil"></div>
+            <div class="contDestCont">
+            
+                <p class="contDestTxt">
+                    Ouro Preto é uma cidade colonial na Serra do Espinhaço, na zona leste do Brasil. 
+                    É conhecida pela arquitetura barroca, que inclui pontes, fontes e praças, e pelas 
+                    ruas calcetadas íngremes e sinuosas. A Praça central de Tiradentes recebeu o nome 
+                    do mártir da independência brasileira. Existem várias igrejas e capelas por toda a cidade,
+                     incluindo a Igreja de São Francisco de Assis, do século XVIII.
+                </p>
+            </div>
+        </div>
+        <%}%>       
+    <div class="hr hrMain"></div>
+
+    <div class="contPerfil">
+        <p class="preTitle">O seu perfil de viagem é:</p>
+        <h3 class="titleViagem questTwoViagem mainPerfil Thist">Cidades Históricas</h3>
+        <div class="contPerfilCont">
+            <img class="imgPerfil" src="img/hist.png" alt="">
+            <p class="contPerfilTxt">
+               Você é uma pessoa crítica que ama arte e história, aprecia novas experiencias
+               e tem prazer em conhecer novas culturas e pessoas, ainda sim, ser obervador e 
+               ter uma opnião aguçada definem uma parte de você.
+            </p>
+        </div>
+    </div>
+    </div>
+<%}%>
+
+<%if(perfil == 'desc'){%>
+    <div class="contFinal">
+        
+    <%if(destinoFinal == "ilhas salomão"){%>    
+            <div class="contDest">
+                <p class="preTitle">O seu destino é:</p>
+                <div class="partDestTitle">
+                <h3 class="titleViagem questTwoViagem mainDest Tcancun">Ilhas Salomão</h3>
+                <img src="img/salm.png" alt="Ilhas Salomão" title="Ilhas Salomão"></div>
+                <div class="contDestCont">
+                    
+                    <p class="contDestTxt">
+                        As Ilhas Salomão, uma nação com centenas de ilhas situadas no Pacífico Sul,
+                         têm diversos locais da 2ª Guerra Mundial. Guadalcanal, uma província e uma 
+                         maiores ilhas do arquipélago Guadalcanal também abriga a capital do país, 
+                         Honiara, onde fica o movimentado mercado Central Market, que oferece os 
+                         produtos agrícolas e os artigos de artesanato tradicionais das ilhas.
+                        O arquipélago centenas de ilhas, das quais seis são 
+                        grandes, vulcânicas, montanhosas e florestadas.
+     
+                        
+                    </p>
+                </div>
+            </div>
+    <%}else{%>
+        <div class="contDest">
+            <p class="preTitle">O seu destino é:</p>
+            <div class="partDestTitle">
+                
+            <h3 class="titleViagem questTwoViagem mainDest Tcopacabana">Primavera do Leste</h3> 
+            <img src="img/br.png" alt=""></div>
+            <div class="contDestCont">
+            
+                <p class="contDestTxt">
+                    A cidade de Primavera do Leste, se localiza no estado de Mato Grosso
+                    lá, além de ser um ícone do agronegócio, 
+                    traz duas lagoas cristalinas que atraem turistas de todo o país: A Lagoa 
+                    Encantada e a Lagoa da Lua. Sem contar que a natureza em seu estado é bem ampla
+                    contando com a floresta tropical amazónica, as zonas húmidas e as 
+                    planícies da savana. Nas proximidades, o Parque Nacional da Chapada 
+                    os Guimarães possui áreas de caminhada com penhascos em arenito, quedas de água e
+                     cavernas. As extensas zonas húmidas do Pantanal albergam diversas espécies 
+                     selvagens, incluindo araras, caimões e jaguares.
+                </p>
+            </div>
+        </div>
+        <%}%>       
+    <div class="hr hrMain"></div>
+
+    <div class="contPerfil">
+        <p class="preTitle">O seu perfil de viagem é:</p>
+        <h3 class="titleViagem questTwoViagem mainPerfil Tdesc">Lugares Desconhecidos</h3>
+        <div class="contPerfilCont">
+            <img class="imgPerfil" src="img/desc.png" alt="">
+            <p class="contPerfilTxt">
+                Você é alguem que gosta de sair dos padrões, gosta de experiencias novas 
+                    e de sair da zona de conforto,
+                    e pra tudo isso sua coragem e espirito de aventureiro o acompanham, 
+                    efrentando e se adimirando por novos custumes
+                    e culturas.
+            </p>
+        </div>
+    </div>
+    </div>
+<%}%>
+
+<%if(perfil == 'mont'){%>
+    <div class="contFinal">
+        
+    <%if(destinoFinal == "interlaken"){%>    
+            <div class="contDest">
+                <p class="preTitle">O seu destino é:</p>
+                <div class="partDestTitle">
+                <h3 class="titleViagem questTwoViagem mainDest Tinter">Interlaken</h3>
+                <img src="img/sc.png" alt="Suiça" title="Suiça"></div>
+                <div class="contDestCont">
+                    
+                    <p class="contDestTxt">
+                        Interlaken é um destino turístico tradicional na região montanhosa de 
+                        Bernese Oberland, centro da Suíça. Erguida sobre uma estreita faixa 
+                        de vale, entre as águas cor de esmeralda dos lagos Thun e Brienz, a 
+                        cidade tem casas antigas de madeira e um parque público em ambos os 
+                        lados do rio Aare. Nas montanhas ao redor, com densas florestas, prados 
+                        alpinos e geleiras, há muitas opções de trilhas e esqui.
+                        
+                    </p>
+                </div>
+            </div>
+    <%}else{%>
+        <div class="contDest">
+            <p class="preTitle">O seu destino é:</p>
+            <div class="partDestTitle">
+                
+            <h3 class="titleViagem questTwoViagem mainDest Tcopacabana">Amajari</h3> 
+            <img src="img/br.png" alt="Brasil" title="Brasil"></div>
+            <div class="contDestCont">
+            
+                <p class="contDestTxt">
+                    A cidade de Amajari (Roraima), e conhecida pela "Serra do Tepequem", 
+                    onde não é difícil avistar animais como tamanduás, jabutis, além de aves 
+                    como gaviões, garças, araras e outros pequenos voadores que embelezam o 
+                    caminho e podem render boas fotos para o álbum de recordações. O viajante 
+                    também é brindado com uma vista de encher os olhos. Imensos buritizais 
+                    encortinam a paisagem, formando um grande painel verde, de onde se ouve o 
+                    tilintar de pássaros.
+                </p>
+            </div>
+        </div>
+        <%}%>       
+    <div class="hr hrMain"></div>
+
+    <div class="contPerfil">
+        <p class="preTitle">O seu perfil de viagem é:</p>
+        <h3 class="titleViagem questTwoViagem mainPerfil Tmont">Montanhas</h3>
+        <div class="contPerfilCont">
+            <img class="imgPerfil" src="img/mont.png" alt="">
+            <p class="contPerfilTxt">
+                Você é uma pessoa calma  e sossegada, gosta de descansar e repor as energias
+                no destino de viagem, as paisagens lindas e montanhosas te alegram, sem contar 
+                na sensação de aventura e paz que as montanhas trazem para quem as aprecia.
+            </p>
+        </div>
+    </div>
+    </div>
+<%}%>
+
+
+
+        <div class="buttonsNav">
+    <form action="/viagemRe" method="post">
+    <button type="submit" class="back">Refazer Questionário</button>
+    </form>
+
+    <form action="/viagemBack" method="post">
+    <button type="submit" class="submit">Mudar Email</button>
+    </form>
+</div>
+    <%}%>
+            
+    </div>
+
+</div>
+<%- include('parts/footer', { }) %>
+</body>
+</html>

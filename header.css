@@ -1,0 +1,357 @@
+header{
+
+    width: 100%;
+    height: 80px;
+    transition: box-shadow 0.7s, height 0.7s;
+    position: fixed;
+    z-index: 10000000;
+    
+}
+
+header.shadow{
+
+    transition: box-shadow 0.7s;
+    background-color: var(--bg);
+    box-shadow: 0px 0px 10px var(--color-shadow);
+ 
+
+}
+
+button{
+
+    border: 0;
+
+}
+
+.container.header{
+
+   max-width: 1300px;
+   margin: 0 auto;
+   height: 80px;
+    justify-content: space-between;
+
+    padding: 0 50px;
+    box-sizing: border-box;
+
+}
+
+header ul{
+
+    gap: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .img{
+
+    width: 23px;
+    height: 23px;
+    background-image: var(--urlImg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+header ul li a{
+    transition: .5s;
+    height: fit-content;
+    position:relative;
+
+}
+
+header ul li i{
+
+    transition: .5s;
+
+}
+
+header ul li a:hover, header ul li i:hover{
+
+   color:rgb(41, 91, 255) ;
+   
+   transition: 0.25s;
+
+}
+
+header .img:hover{
+    transition: 0.5s;
+    
+    transform: rotate(-45deg)
+
+}
+
+li#imp   a{
+
+    color: white;
+
+}
+
+#imp a{
+
+    transition: .5s;
+    padding: 15px;
+    text-align: center;
+    border-radius: 7px;
+    background-color: rgb(41, 91, 255);
+   
+}
+
+#imp a:hover{
+
+    transition: .5s;
+    background-color: rgb(17, 65, 223);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.103);
+
+}
+
+.logado p{
+
+    font-size: 13px;
+    color: rgb(82, 82, 82);
+    font-style: italic;
+}
+
+.logado{
+
+    display: flex;  
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+
+}
+
+input#switch{
+
+    display: none;
+
+}
+
+label.sw{
+
+width: 24px;
+height: 24px;
+
+    cursor: pointer;
+
+
+}
+
+label #imgDark{
+    width: 24px;
+    height: 24px;
+    transition: 0.5s;
+
+}
+
+label #imgDark:hover{
+
+    transform: rotate(45deg);
+
+}
+
+input:checked + label #imgDark {
+
+    transition: 0.5s;
+
+}
+
+.drop{
+
+    display: flex;
+    gap: 5vw;
+
+}
+
+#btnHamb{
+
+    display: none;
+
+}
+
+header.dropdown + header.dropdown .container .drop{
+
+    visibility: visible;
+    overflow-y: auto;
+
+}
+
+@media  (max-width: 770px){
+
+    /*header hamburguer*/
+
+    #btnHamb{
+
+        display: block;
+        
+    
+    }
+
+    .contDrop{
+        height: 100%;
+        display: flex;
+        gap: 10vh;
+        margin-top: 6vh;
+        flex-direction: column;
+        overflow: hidden;
+
+    }
+
+    header{
+
+    height: 80px;
+    
+        display: flex;
+        flex-direction: column;
+    
+        align-items: center;
+        box-sizing: border-box;
+        
+        transition:0.7s;
+
+    
+       
+       
+
+    }
+    header.dropdown{
+        background-color: var(--bg);
+        height: 100vh;
+        transition: height .8s;
+
+    }
+
+    .drop{
+
+        
+       
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column; 
+
+
+
+
+    }
+
+    header.dropdown > .container.header .contDrop .drop{
+
+        display: flex;
+
+    }
+
+    header.dropdown > .container.header .contDrop{
+
+        overflow:  visible;
+
+    }
+
+    .container.header{
+
+        position: fixed;
+        max-width:680px;
+
+    }
+
+    #ulfilha{
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    
+
+    header.dropdown ~ footer{
+
+        display: none;
+        
+    }
+
+    
+
+    header.dropdown + .container{
+        transition: height 0.7s ;
+        box-sizing: border-box;
+        height: 100vh;
+        overflow: hidden;
+
+    }
+    
+
+}
+
+@media (max-width: 1040px){
+    .logado p{
+
+        font-size: 12px;
+    }
+
+    header a{
+
+        font-size: 14px;
+
+    }
+}
+
+@media (max-width: 810px){
+    .logado p{
+
+        font-size: 11px;
+    }
+
+    header a{
+
+        font-size: 13px;
+
+    }
+}
+
+/*label.sw {
+
+        
+
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: grey;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+
+}
+
+label.sw::after{
+
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 90px;
+    transition: 0.3s;
+
+}
+
+input:checked + label.sw {
+
+    background-color: rgb(71, 71, 71);
+
+}
+
+input:checked + label.sw::after {
+
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+
+}
+
+label.sw:active:after {
+
+    width: 45px;
+
+}*/

@@ -1,0 +1,608 @@
+.container.viagemDiv{
+
+    padding-top: 80px;
+    height: fit-content;
+}
+
+.content-viagem{
+
+    width: 100%;
+    height: 100%;
+    min-height: 72vh;
+    max-width: 1100px;
+
+    margin: 5vh 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+padding: 0 5vw;
+    gap: 1vw;
+}
+
+.content-viagem .hr{
+
+    margin: 3vh 0;
+    
+
+}
+
+.content-viagem .hr.hrMain{
+
+    margin: 7vh 0;
+
+}
+
+.titleViagem{
+
+    color: var(--color-tema);
+    font-size: 22px;
+    margin-top: 0;
+
+}
+
+/*--*/
+
+.cont.email{
+
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   max-width: 600px;
+
+    gap: 30px;
+box-sizing: border-box;
+    padding: 4vh 5vh;
+
+    border-radius: 3px;
+    border: 1px solid var(--color-border);
+
+    margin-top: 8vh;
+
+}
+
+.partEmail{
+width: 100%;
+    max-width: 300px;
+    display: flex;
+    height: 153px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+
+    gap: 1vh;
+
+}
+
+.partInput{
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    height: 40px;
+
+}
+
+.partEmail input{
+
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--color-bordertwo);
+
+}
+
+.partEmail input:focus{
+
+    border-bottom: 2px solid var(--color-tema)
+
+}
+
+.partEmail label{
+    text-align: left;
+width: 100%;
+color:var(--color-txttwo) ;
+    
+
+}
+
+.partEmail .submit{
+    
+    margin-top: 5vh;
+}
+
+.erro{
+
+    
+    text-align: left;
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+    color: rgb(255 64 64 / 79%);
+
+}
+
+#formOneQuest .erro, #formTwoQuest .erro{
+
+    text-align: center;
+    
+
+}
+
+.submit{
+
+    transition: 0.5s;
+    border: 0;
+    color: var(--color-txttwo);
+
+}
+
+.submit:hover{
+
+    transition: 0.25s;
+
+    color: rgb(0, 226, 0);
+    cursor: pointer;
+
+}
+
+/*--*/
+
+input#email{
+
+    color: var(--color-txtheader);
+
+}
+
+#formOneQuest{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    /*min-height: 1120px;*/
+
+}
+
+.titleViagem.questViagem{
+
+    font-size: 28px;
+    margin-bottom: 3vh;
+
+}
+
+.questsOne{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    gap: 5px;
+
+}
+
+.titleQuest{
+
+    
+    color: var(--color-tema);
+
+}
+
+.cont.quest{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 3vh 5vw 5vh 5vw;
+    box-sizing: border-box;
+    max-width: 900px;
+
+}
+
+
+
+label{
+
+width: fit-content;
+color: var(--color-sub);
+
+}
+
+.cont.quest label{
+
+    color: var(--label-n)
+
+}
+
+.cont.quest label:hover{
+
+    cursor: pointer;
+    color: var(--label-h);
+
+}
+
+.cont.quest input[type=radio]{
+
+    display: none;
+
+}
+
+.cont.quest input[type=radio]:checked + label {
+    color: var(--label-c);
+    
+} 
+
+button.back{
+    transition: 0.5s;
+    border: 0;
+    color: var(--color-txttwo);
+
+}
+
+button.back:hover{
+    transition: 0.25s;
+    cursor: pointer;
+    color:rgb(255, 64, 64)
+
+}
+
+.buttonsNav{
+
+    width: 100%;
+    max-width: 900px;
+    padding: 0 1%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*--*/
+
+#formTwoQuest{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+
+}
+
+
+.mainPerfil, .mainDest{
+
+    color: rgb(18, 62, 207);;
+    font-size: 55px;
+
+}
+
+.Tpraia{
+
+    color: rgb(249, 200, 68);
+
+}
+
+.Thist{
+
+    color: rgb(63, 186, 28);
+
+}
+
+.Tdesc{
+
+    color: rgb(24, 48, 103);
+
+}
+
+.Tmont{
+
+    color: #79592b;
+
+}
+
+
+
+.preTitle{
+
+    font-size: 15px;
+    color: var(--pre-title);
+    font-style: italic;
+
+}
+
+.contPerfil{
+
+    max-width: 850px;
+    gap: 5vw;
+
+}
+
+.contPerfilCont{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+.contPerfilCont p{
+
+    color: var(--color-txttwo);
+    text-align: left;
+    font-size: 20px;
+    width: 50%;
+
+}
+
+/*--*/
+
+.contFinal{
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+
+    padding: 7vh 3vw;
+
+}
+
+.mainFinal{
+
+    font-size: 33px;
+    color: var(--color-tema);
+
+}
+
+
+.contDest{
+
+    max-width: 850px;
+    gap: 5vw;
+
+ 
+
+}
+
+.contDestCont{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+.contDestCont p{
+
+    color: var(--color-txttwo);
+    text-align: center;
+    font-size: 21px;
+    width: 63%;
+
+}
+
+
+.partDestTitle h3{
+
+    margin: 0;
+
+}
+
+.partDestTitle{
+
+    height: fit-content;
+    gap: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 2vh;
+
+}
+
+.Tcancun{
+
+    color: rgb(0, 104, 71);
+
+}
+
+.Tcopacabana{
+
+    color: rgb(0, 155, 58);
+
+}
+
+.Troma{
+
+color: rgb(207, 39, 52);
+
+}
+
+.Tinter{
+
+    color:rgb(254, 0, 0)
+
+}
+
+@media (max-width: 1040px){
+
+    .titleViagem{
+
+        font-size: 20px; 
+    }
+    .partEmail label{
+
+        font-size: 15px; 
+
+    }
+    input#email {
+
+        font-size: 15px;
+
+    }
+
+    .erro{
+
+        font-size: 12px;
+
+    }
+    .titleViagem.questViagem {
+        font-size: 23px;
+        
+    }
+
+    .mainPerfil, .mainDest {
+        
+        font-size: 40px;
+    }
+
+    .preTitle {
+        font-size: 13px;
+        
+    }
+
+    .contPerfilCont p, .contDestCont p {
+        
+        font-size: 18px;
+        
+    }
+
+    .mainFinal {
+        font-size: 28px;
+        
+    }
+
+    .back, .submit{
+
+        font-size: 16px;
+
+    }
+}
+
+@media (max-width: 810px){
+    .titleViagem{
+
+        font-size: 17px; 
+    }
+    .partEmail label{
+
+        font-size: 13px; 
+
+    }
+    input#email {
+
+        font-size: 13px;
+
+    }
+    .erro{
+
+        font-size: 11px;
+
+    }
+    .titleViagem.questViagem {
+        font-size: 20px;
+        
+    }
+
+    .mainPerfil, .mainDest {
+        
+        font-size: 32px;
+    }
+
+    .preTitle {
+        font-size: 12px;
+        
+    }
+
+    .contPerfilCont p, .contDestCont p {
+        
+        font-size: 16px;
+        
+    }
+
+    .mainFinal {
+        font-size: 25px;
+        
+    }
+
+    .back, .submit{
+
+        font-size: 15px;
+
+    }
+
+    img.imgPerfil{
+
+        width: 160px;
+        height: 160px;
+
+    }
+
+}
+
+@media (max-width: 620px){
+
+    .titleViagem{
+
+        font-size: 15px; 
+    }
+    .partEmail label{
+
+        font-size: 12px; 
+
+    }
+    input#email {
+
+        font-size: 12px;
+
+    }
+    .erro{
+
+        font-size: 10px;
+
+    }
+    .contPerfilCont, .partDestTitle{
+
+        flex-direction: column;
+
+    }
+   
+    .mainPerfil, .mainDest {
+        
+        font-size: 28px;
+    }
+
+    img.imgPerfil{
+
+        width: 130px;
+        height: 130px;
+
+    }
+
+    .contPerfilCont p, .contDestCont p {
+        width: 80%;
+        text-align: center;
+    }
+
+    .mainFinal {
+        font-size: 20px;
+        
+    }
+
+    .back, .submit{
+
+        font-size: 14px;
+
+    }
+
+}
