@@ -40,7 +40,7 @@
                 <a href="./index.html">  Home </a>
                 
                 
-                <button id="btnHamb"><img id="imgHamb" src="img/hamb.png" alt="" ></button>
+               
                   
 
                 
@@ -52,7 +52,17 @@
             
             <div class="toggle">
             <input id="switch" type="checkbox" name="theme">
-            <label class="sw" for="switch">darkmode OFF</label>
+            <label id="swDark" class="sw swOn" for="switch">
+                <div class="onOff">
+                    <p>darkmode</p>  
+                    <div class="swsw">
+                        <p class="off">OFF</p>
+                        <p class="on">ON</p>
+                        
+                    </div>
+                </div>
+                
+            </label>
             </div>
 
         </nav>
@@ -83,6 +93,7 @@
 
 
 <script src="./darkMode.js"></script>
+<script src="./scroll.js"></script>
     <footer class="footer">
 
         <div class="content-footer">

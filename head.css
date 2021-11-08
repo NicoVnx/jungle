@@ -49,7 +49,6 @@ ul, li, a, i, p, h1, h2, h3, nav, header{
 html{
 
     --bg: rgb(216, 211, 206);
-    --bg-header: rgba(231, 223, 216, 0.466);
     --color-txtheader: black;
     --color-tema: rgb(8, 94, 8);
     --color-sub: rgb(107, 90, 65);
