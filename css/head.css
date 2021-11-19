@@ -177,7 +177,7 @@ i.sub{
 
     .sub.one {
         font-size: 18px;
-        margin-bottom: 18vh;
+        margin-bottom: 13vh;
     }
 
     a.sub , p.sub {
@@ -200,7 +200,7 @@ i.sub{
 
     .sub.one {
         font-size: 17px;
-        margin-bottom: 15vh;
+        margin-bottom: 10vh;
     }
 
     a.sub , p.sub {
@@ -223,6 +223,6 @@ i.sub{
 
     .sub.one {
         
-        margin-bottom: 12vh;
+        margin-bottom:4vh;
     }
 }

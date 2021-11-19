@@ -90,7 +90,8 @@ nav.nav-cards{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
+padding: 30px;
+box-sizing: border-box;
     gap: 3vw;
 
 }
@@ -181,19 +182,19 @@ p.sub.footer{
 
 .card.jp{
 
-    background-image: url('/img/rome2.jpg');
+    background-image: url('/img/cp1.png');
 
 }
 
 .card.suica{
 
-    background-image: url('/img/sc1.jpg');
+    background-image: url('/img/cp2.png');
 
 }
 
 .card.rj{
 
-    background-image: url('/img/rj1.jpg');
+    background-image: url('/img/cp3.png');
 
 }
 
@@ -377,6 +378,11 @@ font-size: 15px;
 }
 
 @media (max-width: 680px){
+
+    .click.suica {
+        display: none;
+
+    }
 
     .sobreHomeTxt , .viagemHomeTxt {
         width: 80%;

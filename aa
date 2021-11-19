@@ -1,0 +1,5 @@
+<div class="sociais">
+                <a href="https://www.instagram.com" target="_blank"><img id="imgIg" src="img/instaw.png" alt="Intagram"></a>
+                <a href="https://www.github.com" target="_blank"><img id="imgGit" src="img/gitw.png" alt="Github"></a>
+                <a  href="https://www.facebook.com" target="_blank"><img id="imgFb" src="img/fbw.png" alt="Facebook"></a>
+            </div>
