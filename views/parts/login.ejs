@@ -1,0 +1,36 @@
+<div class="partLogin">
+    <div class="erros">
+    <% erros.forEach(erro => { %><a class="erro">* <%= erro.txt %></a><% }) %>
+</div>
+    <div class="forms">
+    <form action="/logar" method="post" class="formLogin">
+    <h4>Login</h4>
+    <div class="box">
+        <label for="email">Email
+        <input type="text" id="email" name="email"></label>
+        <label for="password">Senha
+        <input type="password" id="password" name="password" maxlength="32" minlength="8"></label>
+        
+        <button type="submit">Confirmar</button>
+    </div>
+        
+    </form>
+    
+    <form action="/cadastrar" method="post" class="formCad">
+    <h4>Cadastro</h4>
+    <div class="box">
+        <label for="name">Nome
+        <input type="text" id="name" name="name" maxlength="14" minlength="4"></label>
+        <label for="email">Email
+        <input type="text" id="email" name="email"></label>
+        <label for="password">Senha
+        <input type="password" id="password" name="password" maxlength="32" minlength="8"></label>
+        
+        <button type="submit">Confirmar</button>
+    </div>
+        
+    
+    </form>
+    </div>
+    
+    </div>
