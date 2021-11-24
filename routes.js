@@ -30,7 +30,7 @@ routes.get("/", (req, res) => {
   }
 });
 
-routes.get("/plantas", (req, res) => { res.render(views + "plantas", {  }) });
+routes.get("/plantas", (req, res) => { res.render(views + "plantas", { userAdm, userEmail, userID, userName, sessionID }) });
 
 routes.get("/jabuticabeira", (req, res) => { res.render(views + "plantas/jabuticabeira", {  }) });
 routes.get("/agapantos", (req, res) => { res.render(views + "plantas/agapantos", {  }) });
