@@ -16,7 +16,7 @@ var  userName
 var userEmail 
 var userAdm 
 
-var sessionID
+var sessionID = 'NOT'
 
 const regexOne = /^[a-zA-Z]+([ ]?[a-zA-Z])*$/;
 
@@ -206,7 +206,7 @@ routes.post("/cadastroRedirect", (req, res) => {
 });
 
 routes.post("/logout", function (req, res) {
-  sessionID = undefined
+  sessionID = 'NOT'
   req.session.destroy();
   res.redirect("/");
 });
