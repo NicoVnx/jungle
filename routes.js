@@ -32,11 +32,11 @@ routes.get("/", (req, res) => {
 
 routes.get("/plantas", (req, res) => { res.render(views + "plantas", { userAdm, userEmail, userID, userName, sessionID }) });
 
-routes.get("/jabuticabeira", (req, res) => { res.render(views + "plantas/jabuticabeira", {  }) });
-routes.get("/agapantos", (req, res) => { res.render(views + "plantas/agapantos", {  }) });
-routes.get("/amora", (req, res) => { res.render(views + "plantas/amora", {  }) });
-routes.get("/camarao-vermelho", (req, res) => { res.render(views + "plantas/camarao-vermelho", {  }) });
-routes.get("/jiboia", (req, res) => { res.render(views + "plantas/jiboia", {  }) });
+routes.get("/jabuticabeira", (req, res) => { res.render(views + "plantas/jabuticabeira", { userAdm, userEmail, userID, userName, sessionID }) });
+routes.get("/agapantos", (req, res) => { res.render(views + "plantas/agapantos", { userAdm, userEmail, userID, userName, sessionID }) });
+routes.get("/amora", (req, res) => { res.render(views + "plantas/amora", { userAdm, userEmail, userID, userName, sessionID }) });
+routes.get("/camarao-vermelho", (req, res) => { res.render(views + "plantas/camarao-vermelho", { userAdm, userEmail, userID, userName, sessionID }) });
+routes.get("/jiboia", (req, res) => { res.render(views + "plantas/jiboia", { userAdm, userEmail, userID, userName, sessionID }) });
 
 routes.post("/logar", (req, res) => {
   if (erros.length >= 1) {
