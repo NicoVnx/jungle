@@ -6,7 +6,7 @@ var morgan = require("morgan");
 var User = require("./models/User");
 const views = __dirname + "/views/";
 
-const uri = "mongodb+srv://nico:123321@cluster0.rtak1.mongodb.net/testeDB?retryWrites=true&w=majority";
+const uri = "mongodb+srv://nico:123321@cluster0.rtak1.mongodb.net/jungleDB?retryWrites=true&w=majority";
 
 const MongoStore = require('connect-mongo')
 
