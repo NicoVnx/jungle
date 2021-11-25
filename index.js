@@ -40,7 +40,7 @@ server.use(express.urlencoded({ extended: true }));
 server.use(session({
     secret: "asjdnIAOJSNDOjansd1238192",
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     store: MongoStore.create({
       mongoUrl: uri,
       mongooseConection: mongoose.connection,
