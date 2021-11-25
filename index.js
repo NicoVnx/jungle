@@ -45,7 +45,6 @@ app.use(
     },
     
     store: MongoStore.create({
-      mongoUrl: uri,
       url: uri, //YOUR MONGODB URL
       ttl: 14 * 24 * 60 * 60,
       autoRemove: 'native' 
@@ -142,7 +141,7 @@ app
           if(err){
               console.log(err);
           } else {
-              res.send(req.session.user) // YOU WILL GET THE UUID IN A JSON FORMAT
+              res.redirect('/home') // YOU WILL GET THE UUID IN A JSON FORMAT
           }
       });
         
@@ -176,7 +175,7 @@ app
         });
         req.session.user = user;
 
-        res.redirect("/");
+        res.redirect("/home");
     } catch (error) {
       console.log(error)
     }
