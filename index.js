@@ -1,6 +1,9 @@
 const express = require("express");
 const server = express();
 const routes = require("./routes");
+const session = require("express-session");
+
+var MongoStore = require('connect-mongo');
 
 const uri = "mongodb+srv://nico:123321@cluster0.rtak1.mongodb.net/jungleDB?retryWrites=true&w=majority";
 
@@ -15,8 +18,7 @@ server.set("view engine", "ejs");
 const mongoose = require("mongoose");
 
 mongoose.Promise = global.Promise;
-mongoose
-  .connect(uri, {
+mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     
@@ -33,13 +35,17 @@ server.use(express.static(__dirname + '/public'))
 
 server.use(express.urlencoded({ extended: true }));
 
-const session = require("express-session");
 
-server.use(
-  session({
+
+server.use(session({
     secret: "asjdnIAOJSNDOjansd1238192",
-    resave: true,
+    resave: false,
     saveUninitialized: true,
+    store: MongoStore.create({
+      mongoUrl: uri,
+      mongooseConection: mongoose.connection,
+  }),
+    
   })
 );
 
