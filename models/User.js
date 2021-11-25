@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
-const uri = "mongodb+srv://nico:123321@cluster0.rtak1.mongodb.net/testeDB?retryWrites=true&w=majority";
+const uri = "mongodb+srv://nico:123321@cluster0.rtak1.mongodb.net/jungleDB?retryWrites=true&w=majority";
 
 mongoose.connect(uri,{
     useNewUrlParser:true,
