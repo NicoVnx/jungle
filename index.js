@@ -45,7 +45,7 @@ app.use(
     },
     
     store: MongoStore.create({
-      url: uri, //YOUR MONGODB URL
+      mongoUrl: uri,
       ttl: 14 * 24 * 60 * 60,
       autoRemove: 'native' 
   })
