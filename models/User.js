@@ -1,50 +1,41 @@
-const mongoose = require("mongoose")
+const mongoose = require('mongoose')
+const bcrypt = require('bcrypt')
+const uri = "mongodb+srv://nico:123321@cluster0.rtak1.mongodb.net/testeDB?retryWrites=true&w=majority";
 
-const UserSchema = mongoose.Schema({
+mongoose.connect(uri,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true
+})
 
-    name:{
-        type: String,
-        require: true,
-        unique: false,
-        null: false,
-        lowercase: false,
-        
-    },
-    password:{
-        type: String,
-        require: true,
-        unique: false,
-        null: false,
-        lowercase: false,
-
+const userSchema = mongoose.Schema({
+    username:{
+        type:String,
+        unique:true,
+        required: true
     },
     email:{
-        type: String,
-        require: true,
-        unique: true,
-        null: false,
-        lowercase: true,
-
-    }, 
-    userAdm:{
-        type: Number,
-        require: true,
-        unique: false,
-        null: false,
-        lowercase: false,
-
-    },         
-    createdAt:{ 
-        type: Date,  
-        default: Date.now 
+        type:String,
+        unique:true,
+        required:true
+    },
+    password:{
+        type:String,
+        required:true
     }
 })
 
- mongoose.model('users', UserSchema)
+userSchema.pre("save", function(next) {
+    if(!this.isModified("password")) {
+        return next();
+    }
+    this.password = bcrypt.hashSync(this.password, 10);
+    next();
+});
 
-const User = mongoose.model('users', UserSchema)
+userSchema.methods.comparePassword = function(plaintext, callback) {
+    return callback(null, bcrypt.compareSync(plaintext, this.password));
+};
 
-module.exports = User
+const userModel = mongoose.model('user',userSchema)
 
-
-
+module.exports = userModel

@@ -5,9 +5,12 @@ const checkbox = document.getElementById("switch")
 
 const swDark = document.getElementById("swDark")
 
-const imgFb = document.getElementById("imgFb")
-const imgGit = document.getElementById("imgGit")
-const imgIg = document.getElementById("imgIg")
+
+const imgUser = document.getElementById("imgUser")
+const imgPlant = document.getElementById("imgPlant")
+const imgHome = document.getElementById("imgHome")
+const imgHamb = document.getElementById("imgHamb")
+
 
 
 
@@ -97,20 +100,12 @@ if(Cookies.get('dark')){
 
 }
 
-    /*checkbox.addEventListener("change", ({target}) => {
-
-    target.checked ? imgI.style.backgroundImage = "url('/img/airw.png')" : imgI.style.backgroundImage = "url('/img/air.png')"
-    target.checked ? imgFb.src = "img/fb.png" : imgFb.src = "img/fbw.png"
-    target.checked ? imgGit.src = "img/git.png" : imgGit.src = "img/gitw.png"
-    target.checked ? imgIg.src = "img/insta.png" : imgIg.src = "img/instaw.png"
-
-    target.checked ? imgDark.src = "/img/moon.png" : imgDark.src = "/img/sun.png"
-target.checked ? imgHamb.src = "img/hambw.png" : imgHamb.src = "img/hamb.png"
-    //target.checked ? darkLabel.src = "img/moon.png" : darkLabel.src = "img/sun.png"
-
-    target.checked ? imgCrist.src = "img/cristw.png" : imgCrist.src = "img/crist.png"
-    target.checked ? imgBust.src = "img/bustw.png" : imgBust.src = "img/bust.png"
-
+    checkbox.addEventListener("change", ({target}) => {
+        target.checked ? imgHome.src = "img/homeW.png" : imgHome.src = "img/home.png"
+    target.checked ? imgPlant.src = "img/plantW.png" : imgPlant.src = "img/plant.png"
+    target.checked ? imgUser.src = "img/userW.png" : imgUser.src = "img/user.png"
+    target.checked ? imgHamb.src = "img/hambW.png" : imgHamb.src = "img/hamb.png"    
+    
     
 
     
@@ -120,33 +115,29 @@ target.checked ? imgHamb.src = "img/hambw.png" : imgHamb.src = "img/hamb.png"
 
 
 
-    imgDark.src = "/img/moon.png"
-    imgI.style.backgroundImage = "url('/img/airw.png')"
-    imgFb.src = "img/fb.png"
-    imgGit.src = "img/git.png"
-    imgIg.src = "img/insta.png"
-    imgHamb.src = "img/hambw.png"
-    //darkLabel.src = "img/moon.png"
-
-    imgCrist.src = "img/cristw.png"
-    imgBust.src = "img/bustw.png"
+if(Cookies.get('dark')){
+    imgHome.src = "img/homeW.png"
+imgPlant.src = "img/plantW.png"
+    imgUser.src = "img/userW.png"
+    imgHamb.src = "img/hambW.png"
+    
+    
+}    
+    
+    
 
     
 
     
 
 else{
-    imgDark.src = "/img/sun.png"
-    imgFb.src = "img/fbw.png"
-    imgGit.src = "img/gitw.png"
-    imgIg.src = "img/instaw.png"
+    imgHome.src = "img/home.png"
+    imgPlant.src = "img/plant.png"
+    imgUser.src = "img/user.png"
     imgHamb.src = "img/hamb.png"
-    //darkLabel.src = "img/sun.png"
-
-    imgCrist.src = "img/crist.png"
-    imgBust.src = "img/bust.png"
+    
 
     
    
 
-}*/
+}/**/

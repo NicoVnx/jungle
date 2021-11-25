@@ -25,6 +25,12 @@
 
 }
 
+.plantas h3{
+
+    color: var(--color-txtone);
+
+}
+
 .plantas .card{
 display: flex;
 justify-content: center;
@@ -53,10 +59,12 @@ align-items: flex-end  ;
 
 .card{
 
+    padding: 10px;
+    box-sizing: border-box;
 color: var(--color-txtone);
 
 }
-.card.agapantos{
+.card.jabuticabeira{
 
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.651)), url('/img/jabuticabeira.png') ;
 
@@ -119,8 +127,8 @@ color: var(--color-txtone);
 
     .plantas .card{
 
-        width: 350px;
-        height: 250px;
+        width: 300px;
+        height: 200px;
 
     }
 
